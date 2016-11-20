@@ -1,0 +1,115 @@
+import java.util.ArrayList;
+import java.io.*;
+import java.util.Scanner;
+
+
+public class MainProgram {
+
+	public static void main(String[] args) throws IOException {
+		ArrayList<Employee> object1 = ReadFile("Employees.csv");
+		
+		System.out.println(object1.get(0).getBaseSalary());
+		
+		ArrayList<Employee> object2 = SortingAlgorithm(object1);
+		
+		for(int i=0; i<object2.size(); i++) {
+			System.out.println(object2.get(i).getId());
+		}
+		
+		
+		
+	}
+	
+	public static ArrayList<Employee> SortingAlgorithm(ArrayList<Employee> eList) {
+		
+		 int startScan, index, minIndex;
+		 Employee minValue = new Employee();
+		 for (startScan = 0; startScan < (eList.size()-1); startScan++){
+		     minIndex = startScan;
+		     minValue = (eList.get(startScan));         
+		     //Iterate through the unsorted section and find the smallest number
+		     for(index = startScan + 1; index < eList.size(); index++){
+		       if (eList.get(index).getId() < minValue.getId()){
+		          minValue = eList.get(index);
+		          minIndex = index;
+		       }
+		     }
+		         //swap min value with the startIndex value
+		         eList.remove(minIndex);
+		         eList.add(minIndex,eList.get(startScan));
+		         eList.remove(startScan);
+		         eList.add(startScan, minValue);
+		 }
+		 
+		 return eList;
+	}
+	
+	public static ArrayList<Employee> ReadFile(String fileName) throws IOException {
+		int numOfLines = 0;
+		File f = new File(fileName);
+		
+		Scanner fileCount = new Scanner(f);
+		Scanner fileInput = new Scanner(f);
+		
+		while(fileCount.hasNextLine()) {
+			fileCount.nextLine();
+			numOfLines++;
+		}
+		
+		fileCount.close();
+		
+		String [] stringArray = new String[numOfLines];
+		
+		int i = 0;
+		
+		while(fileInput.hasNextLine()) {
+			stringArray[i] = fileInput.nextLine();
+			i++;
+		}
+	
+		fileInput.close();
+		
+		ArrayList<Employee> empClass = new ArrayList<Employee>();
+		
+		for(i=1; i<stringArray.length; i++) {
+			
+			//Sets the string array to the string split into sub strings separated
+			//by commas in the given array element 
+			String [] employeeRecords = stringArray[i].split("[,]");
+			
+			if(employeeRecords[2].equals(" Junior")) {
+				
+				empClass.add(new JuniorEmployee(Integer.parseInt(employeeRecords[0]),
+						Integer.parseInt(employeeRecords[1]),
+						Double.parseDouble(employeeRecords[3]),
+						Double.parseDouble(employeeRecords[4]) ));
+			}
+			else if(employeeRecords[2].equals(" Senior")) {
+				
+				empClass.add(new SeniorEmployee(Integer.parseInt(employeeRecords[0]),
+						Integer.parseInt(employeeRecords[1]),
+						Double.parseDouble(employeeRecords[3]),
+						Double.parseDouble(employeeRecords[4]) ));
+				
+			}
+			else if(employeeRecords[2].equals(" Manager")) {
+				
+				empClass.add(new Manager(Integer.parseInt(employeeRecords[0]),
+						Integer.parseInt(employeeRecords[1]),
+						Double.parseDouble(employeeRecords[3]),
+						Double.parseDouble(employeeRecords[4]) ));
+			}
+					
+			//Sets the given Stock array list elements setters of all the 
+			//variables to the corresponding String array element
+			
+		}
+		
+		return empClass;
+		
+	}
+	
+	public static OutputFile(ArrayList<Employee> eList) {
+		
+	}
+}

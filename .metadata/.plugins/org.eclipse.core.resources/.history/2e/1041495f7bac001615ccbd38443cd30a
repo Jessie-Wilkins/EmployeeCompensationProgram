@@ -1,0 +1,26 @@
+
+public class SeniorEmployee {
+	double annualBonus;
+
+	public SeniorEmployee() {
+		annualBonus = 0;
+	}
+
+	public void setannualBonus(double userAnnualBonus) {
+		annualBonus = userAnnualBonus;
+	}
+
+	public double getAnnualBonus() {
+		return annualBonus;
+	}
+
+	public String toString() {
+		return (id + " "+yearHired+" " +annualBonus);
+	}
+
+	public double CalculateTotalCompensation() {
+	
+		setTotalCompensation(getAnnualBonus + getBaseSalary);
+		return getTotalCompensation();
+	}
+}

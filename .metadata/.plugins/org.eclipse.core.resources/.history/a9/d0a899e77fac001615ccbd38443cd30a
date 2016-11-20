@@ -1,0 +1,18 @@
+
+public class Manager extends Employee implements EmployeeCompensation {
+double stockDividend;
+	
+	public Manager() {
+		stockDividend = 0;
+	}
+
+	public void setStockDividend(double userStockDividend) {
+		stockDividend = 0;
+	}
+
+	public double CalculateTotalCompensation() {
+	
+		setTotalCompensation(getStockDividend() + getBaseSalary()) ;
+		return getTotalCompensation();
+	}
+}

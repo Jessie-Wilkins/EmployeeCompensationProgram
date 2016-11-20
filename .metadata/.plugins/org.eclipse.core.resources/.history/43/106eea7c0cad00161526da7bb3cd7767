@@ -1,0 +1,25 @@
+
+public class SeniorEmployee extends Employee implements EmployeeCompensation {
+	double annualBonus;
+
+	public SeniorEmployee() {
+		annualBonus = 0;
+	}
+
+	public double getCompensation(double userAnnualBonus) {
+		annualBonus = userAnnualBonus;
+	}
+
+	public double getAnnualBonus() {
+		return annualBonus;
+	}
+
+	public String toString() {
+		return getId() + " "+getYearHired()+" " +getAnnualBonus();
+	}
+
+	public double CalculateTotalCompensation() {
+		setTotalCompensation(getAnnualBonus() + getBaseSalary());
+		return getTotalCompensation();
+	}
+}

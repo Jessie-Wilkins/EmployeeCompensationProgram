@@ -1,0 +1,4 @@
+
+public class JuniorEmployee  extends Employee implements EmployeeCompensation{
+
+}

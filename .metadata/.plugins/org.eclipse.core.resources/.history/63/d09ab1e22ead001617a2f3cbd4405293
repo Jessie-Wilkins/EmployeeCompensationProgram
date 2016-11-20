@@ -1,0 +1,29 @@
+
+public class Manager extends Employee implements EmployeeCompensation {
+double stockDividend;
+	
+	public Manager(int userId, int userYearHired, double userBaseSalary, double userStockDividend) {
+		setId(userId);
+		setYearHired(userYearHired);
+		setBaseSalary(userBaseSalary);
+		setStockDividend(userStockDividend);
+	}
+
+	public void setStockDividend(double userStockDividend) {
+		stockDividend = userStockDividend;
+	}
+	
+	public double getStockDividend() {
+		return stockDividend;
+	}
+	
+	public String toString() {
+		return getId()+" "+getYearHired()+" "+getStockDividend();
+	}
+
+	public double CalculateTotalCompensation() {
+	
+		setTotalCompensation(getStockDividend() + getBaseSalary()) ;
+		return getTotalCompensation();
+	}
+}

@@ -1,0 +1,26 @@
+
+public class JuniorEmployee  extends Employee implements EmployeeCompensation{
+	public double CalculateTotalCompensation() {
+		
+		double commission;
+		
+		public JuniorEmployee (){
+			commission = 0;
+		}
+		
+		public void setCommission(double userCommission) {
+			commission = userCommission;
+		}
+
+		public double getCommission() {
+			return commission;
+		}
+
+		public void toString() {
+			System.out.println(id, yearHired, commission);
+		}
+		
+		setTotalCompensation(getCommission() + getBaseSalary);
+		return getTotalCompensation();
+	}
+}

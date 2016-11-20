@@ -1,0 +1,44 @@
+ID	YEAR_HIRED	TITLE		BASE_SALARY	COMPENSATION
+1	1963		Senior		90000		110000
+This is a senior employee. ID is 1, hired since 1963, and annual bonus is $20000.
+2	1970		Senior		100000		125000
+This is a senior employee. ID is 2, hired since 1970, and annual bonus is $25000.
+3	1972		Manager		100000		165000
+This is a manager. ID is 3, hired since 1972, and stock dividend is $65000.
+4	1968		Senior		100000		160000
+This is a senior employee. ID is 4, hired since 1968, and annual bonus is $60000.
+5	1999		Senior		70000		90000
+This is a senior employee. ID is 5, hired since 1999, and annual bonus is $20000.
+6	1992		Senior		70000		95000
+This is a senior employee. ID is 6, hired since 1992, and annual bonus is $25000.
+7	1974		Manager		100000		300000
+This is a manager. ID is 7, hired since 1974, and stock dividend is $200000.
+8	1995		Senior		70000		100000
+This is a senior employee. ID is 8, hired since 1995, and annual bonus is $30000.
+9	2001		Senior		70000		80000
+This is a senior employee. ID is 9, hired since 2001, and annual bonus is $10000.
+10	1996		Senior		80000		95000
+This is a senior employee. ID is 10, hired since 1996, and annual bonus is $15000.
+11	1999		Senior		50000		60000
+This is a senior employee. ID is 11, hired since 1999, and annual bonus is $10000.
+12	2000		Junior		50000		55000
+This is a junior employee. ID is 12, hired since 2000, and commission is $5000.
+13	1980		Manager		80000		100000
+This is a manager. ID is 13, hired since 1980, and stock dividend is $20000.
+14	2012		Junior		50000		51000
+This is a junior employee. ID is 14, hired since 2012, and commission is $1000.
+15	2012		Junior		50000		52000
+This is a junior employee. ID is 15, hired since 2012, and commission is $2000.
+16	2007		Manager		70000		85000
+This is a manager. ID is 16, hired since 2007, and stock dividend is $15000.
+17	1940		Manager		100000		300000
+This is a manager. ID is 17, hired since 1940, and stock dividend is $200000.
+-------------------------------------
+
+Employee 3 is a manager. Dividend is 65000.000000!
+Employee 7 is a manager. Dividend is 200000.000000!
+Employee 13 is a manager. Dividend is 20000.000000!
+Employee 16 is a manager. Dividend is 15000.000000!
+Employee 17 is a manager. Dividend is 200000.000000!
+
+Goodbye.

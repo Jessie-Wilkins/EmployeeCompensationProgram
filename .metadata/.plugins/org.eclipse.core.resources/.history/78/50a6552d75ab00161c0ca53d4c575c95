@@ -1,0 +1,55 @@
+
+public class Employee {
+	protected int id;
+	protected int yearHired;
+	protected double baseSalary;
+	protected double totalCompensation;
+	protected String employeeSummary;
+	
+	public Employee() {
+		id = 0;
+		yearHired = 0;
+		baseSalary = 0;
+		totalCompensation = 0;
+	}
+	
+	public void setId(int userId) {
+		id = userId;
+	}
+
+	public void setYearHired(int userYearHired) {
+		yearHired = userYearHired;
+	}
+	
+	public void setBaseSalary(double userBaseSalary) {
+		baseSalary = userBaseSalary;
+	}
+
+	public void setCompensation(double userCompensation) {
+		totalCompensation = userCompensation;
+	}
+	
+	public void setEmployeeSummary(String userEmployeeSummary) {
+		employeeSummary = userEmployeeSummary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public int getYearHired() {
+		return yearHired;
+	}
+
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public double getCompensation() {
+		return totalCompensation;
+	}
+
+	public String toString() {
+		String (id, yearHired, baseSalary, compensation);
+	}
+}
